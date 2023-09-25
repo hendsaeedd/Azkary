@@ -1,0 +1,161 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #6C63FF;
+  --secondary: #A09AFF;
+  --error: #e7195a;
+  --yellow: #FFBD00;
+  --gray: #555;
+}
+body {
+  background: #1e1e1e;
+  color: #fff;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #6C63FF;
+  border-radius: 0 0 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 100px;
+}
+.prayer-details {
+  background: var(--secondary);
+  border-left: var(--primary) 70px solid;
+  border-radius: 30px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  h1{
+    font-size: 1.5em;
+  }
+  header{
+    height: 80px;
+  }
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .prayer-details {
+    border-left: var(--primary) 40px solid;
+    margin: 10px;
+    padding: 20px;
+  }
+  .prayer-details p {
+    margin: 10px;
+    font-size: 0.5em;
+  }
+  /* .create {
+    visibility: hidden;
+  } */
+}
+.prayer-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.prayer-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--gray);
+}
+.prayer-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  /* background: #f1f1f1; */
+  padding: 6px;
+  border-radius: 50%;
+  color: var(--gray);
+}
+.increase{
+  border-radius: 50%;
+  margin-top: 5px;
+  width: 25px;
+  height: 25px;
+  padding: auto;
+  background: var(--yellow);
+  color: var(--gray);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.increase:hover{
+  transform: scale(1.1);
+  background: #FFD700;
+}
+
+.features{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* new form */
+
+label, input {
+  display: block;
+}
+textarea {
+  height: 100px;
+}
+input, textarea {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  cursor: pointer;
+}
+form button:hover {
+  background: var(--secondary);
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
